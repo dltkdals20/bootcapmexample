@@ -18,6 +18,23 @@ export const DEFAULTS = {
   check_status: '정상',
 } as const
 
+export const RECRUITMENT_STATUS_OPTIONS = ['open', 'upcoming', 'closed'] as const
+export const RECRUITMENT_STATUS_LABELS: Record<string, string> = {
+  open: '모집중',
+  upcoming: '모집예정',
+  closed: '마감',
+}
+export const RECRUITMENT_STATUS_COLORS: Record<string, string> = {
+  open: '#22C55E',
+  upcoming: '#3B82F6',
+  closed: '#94A3B8',
+}
+export const COURSE_EMPLOYMENT_OPTIONS = ['unemployed_only', 'all'] as const
+export const COURSE_EMPLOYMENT_LABELS: Record<string, string> = {
+  unemployed_only: '미취업자',
+  all: '누구나',
+}
+
 export const LEARNING_STATUS_COLORS: Record<string, string> = {
   수강예정: '#3B82F6', 수강중: '#22C55E', 중도탈락: '#EF4444', 수강종료: '#94A3B8',
 }

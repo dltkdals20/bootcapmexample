@@ -58,6 +58,32 @@ export interface DailyMarketingReport {
   created_at: string | null
 }
 
+export type RecruitmentStatus = 'open' | 'upcoming' | 'closed'
+export type CourseEmploymentEligibility = 'unemployed_only' | 'all'
+
+export interface BootcampCourse {
+  id: string
+  course_name: string
+  category: string
+  start_date: string
+  training_period: string | null
+  min_age: number | null
+  max_age: number | null
+  employment_status: CourseEmploymentEligibility
+  eligibility_note: string | null
+  capacity: number
+  current_enrollment: number
+  recruitment_status: RecruitmentStatus
+  support_info: string | null
+  course_url: string | null
+  notes: string | null
+  class_schedule: string | null
+  created_at: string
+}
+
+export type BootcampCourseInsert = Omit<BootcampCourse, 'id' | 'created_at'>
+export type BootcampCourseUpdate = Partial<BootcampCourseInsert>
+
 export interface DashboardStats {
   total: number
   byLearningStatus: Record<LearningStatus, number>

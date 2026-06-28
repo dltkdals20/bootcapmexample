@@ -2,12 +2,13 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { LayoutDashboard, Users, GraduationCap, UploadCloud } from 'lucide-react'
+import { LayoutDashboard, Users, GraduationCap, UploadCloud, BookOpen } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
 const navItems = [
   { href: '/dashboard', label: '대시보드', icon: LayoutDashboard },
   { href: '/students', label: '교육생 목록', icon: Users },
+  { href: '/courses', label: '과정 관리', icon: BookOpen },
   { href: '/upload', label: '엑셀 업로드', icon: UploadCloud },
 ]
 
